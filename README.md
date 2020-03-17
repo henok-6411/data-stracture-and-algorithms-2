@@ -23,4 +23,4 @@
 
 ##  Solution
 
-![array-reverse](/assets/array-revers.jpg)
+![array-reverse](/assets/arrayReversepic.jpg)
