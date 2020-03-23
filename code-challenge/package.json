@@ -2,7 +2,7 @@
   "name": "code-challenge",
   "version": "1.0.0",
   "description": "checking whether my code passed or not",
-  "main": "array-shift.js",
+  "main": "array-binary-search.js.js",
   "scripts": {
     "test": "jest --verbose --coverage"
   },
