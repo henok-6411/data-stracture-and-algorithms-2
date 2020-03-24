@@ -24,4 +24,4 @@
 
 ##  Solution
 
-![array-reverse](./assets/arrayShift.jpg)
+![array-reverse](./assets/binarySearch.jpg)
