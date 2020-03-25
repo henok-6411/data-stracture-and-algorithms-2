@@ -4,24 +4,22 @@
 
 ## 401 Code Challenges
 
-[arrayReverse](arrayReverse/array-reverse.js)
-
-[arrayShift](arrayShift/array-shift.js)
+[array-binary-search](arrayBinarySearch/array-binary-search.js)
 
 
 
 
 
-##  Insert element in to a given array.
-* It will insert an element in to a given array. 
+##  return the index of the array’s element that is equal to the search key.
+
 
 ## Challenge
 
-* It was difficult to make sure that i inseert it in the middle of the index's.
+* It was difficult to make sure that i was not using built-in method.
 
 ## Approach & Efficiency
 * I mostly use my brain before i dive in to google, but at the end i used google. 
 
 ##  Solution
 
-![array-reverse](./assets/arrayShift.jpg)
+![array-reverse](/assets/binarySearch.jpg)
