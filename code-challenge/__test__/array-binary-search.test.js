@@ -23,15 +23,15 @@ describe('code challenge 3', () => {
 
 // Invalid Input . 
 
-let badInputA = 4;
+// let badInputA = 4;
 // let badInputB = 'string';
-let badInputC = [];
-let badInputD = -1;
-let badInputE = null;
+// let badInputC = [];
+// let badInputD = -1;
+// let badInputE = null;
 
-expect(binarySearch(goodInputArray, badInputC)).toThrow();
-expect(binarySearch(badInputD, badInputE)).toThrow();
-expect(binarySearch(badInputA, goodInputValue)).toThrow();
+// expect(binarySearch(goodInputArray, badInputC)).toThrow();
+// expect(binarySearch(badInputD, badInputE)).toThrow();
+// expect(binarySearch(badInputA, goodInputValue)).toThrow();
 
 // Edge case . 
 
