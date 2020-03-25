@@ -1,7 +1,6 @@
 'use strict';
 
-let array = [1, 2, 3, 4, 5];
-let num = 4;
+
 
 function binarySearch(arr, ele) {
   let min = 0;
@@ -20,8 +19,6 @@ function binarySearch(arr, ele) {
     }
   }
 }
-binarySearch(array, num);
-
 
 
 module.exports = binarySearch;
