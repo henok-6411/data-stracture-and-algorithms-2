@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/henok-401-javascript/lab-00/pull/2)
+- [submission PR](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/7)
 
 
 ### DOCUMENTATION 
@@ -24,24 +24,22 @@ i.e.
 
 #### How to initialize/run your application (where applicable)
 
- * node index.js
- * EndPoint:'/'
+ * node linked-list.js
+ * EndPoint:'
       return a boolean
  * EndPoing:'/docs'
       return jsdoc ducumentation page    
 
 #### How to use your library (where applicable)
- * 
+ * Haven't publish it to npm.
 #### Tests
 
 
 * unit tests: 'npm test'
 * lint test: 'npm run lint'
-
-- Travis-ci 
-- Any tests of note?
 - Describe any tests that you did not complete, skipped, etc
+- the Before inserting value didn't work for me.
 
 #### UML
-![](unfinishedImage)
+![](./assets/image/linked-list.jpg)
 
