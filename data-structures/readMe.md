@@ -25,16 +25,11 @@ i.e.
 #### How to initialize/run your application (where applicable)
 
  * node linked-list.js
- * EndPoint:'
-      return a boolean
- * EndPoing:'/docs'
-      return jsdoc ducumentation page    
+ 
 
 #### How to use your library (where applicable)
  * Haven't publish it to npm.
 #### Tests
-
-
 * unit tests: 'npm test'
 * lint test: 'npm run lint'
 - Describe any tests that you did not complete, skipped, etc
