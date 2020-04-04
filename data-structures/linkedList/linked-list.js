@@ -60,9 +60,29 @@ class LinkedList {
       current = current.next;
     }
   }
-  // insertAfter(value, newVal) {
+  insertAfter(value, newVal) {
+    let current = this.head;
+    let newNode;
+    if (!current) {
+      return console.log('Nothing to compare');
+    }
+    while (current) {
+      if (current.val === value) {
+        if (current.next) {
+          newNode = new Node(newVal, current.next);
+          console.log('new noode', newNode);
+          newNode = current.next;
+        } else {
+          newNode = new Node(newVal);
+          current.next = newNode;
+        }
 
-  // }
+        return;
+      }
+      current = current.next;
+    }
+
+  }
   toString() {
     let current = this.head;
     console.log(current);
@@ -88,7 +108,7 @@ myNode.insert(7);
 
 // myNode.insert(9);
 myNode.append(45);
-myNode.insertBefore(5, 70);
+myNode.insertAfter(5, 70);
 
 
 
