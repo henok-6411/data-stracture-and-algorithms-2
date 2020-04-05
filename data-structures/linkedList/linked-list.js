@@ -43,40 +43,42 @@ class LinkedList {
 
   }
   insertBefore(value, newVal) {
+
+
     let current = this.head;
-    if (!current) {
-      console.log('there is not valied value');
-    } else if (current.val === value) {
-      this.head = new Node(newVal, this.head);
+    let prevNode = this.null;
+
+    if (current.val === value) {
+      let newNode = new Node(newVal);
+      newNode.next = current;
+
+      current = newNode;
       return;
     }
-
-    while (current.next) {
-      if (current.next.val === value) {
-        let newNode = new Node(newVal, current.next);
-        current.next = newNode;
+    while (current) {
+      if (current.val === value) {
+        let newNode = new Node(newVal);
+        prevNode.next = newNode;
+        console.log('currrrrr', newNode);
+        newNode.next = current;
         return;
       }
+      prevNode = current;
       current = current.next;
+
     }
   }
   insertAfter(value, newVal) {
     let current = this.head;
-    let newNode;
     if (!current) {
       return console.log('Nothing to compare');
     }
     while (current) {
       if (current.val === value) {
-        if (current.next) {
-          newNode = new Node(newVal, current.next);
-          console.log('new noode', newNode);
-          newNode = current.next;
-        } else {
-          newNode = new Node(newVal);
-          current.next = newNode;
-        }
-
+        let newNode = new Node(newVal);
+        let valueNum = newNode.next;
+        current.next = newNode;
+        newNode.next = valueNum;
         return;
       }
       current = current.next;
@@ -105,10 +107,11 @@ let myNode = new LinkedList();
 myNode.insert(2);
 myNode.insert(5);
 myNode.insert(7);
-
-// myNode.insert(9);
+myNode.insert(9);
 myNode.append(45);
+myNode.insertBefore(5, 70);
 myNode.insertAfter(5, 70);
+
 
 
 

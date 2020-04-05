@@ -37,15 +37,13 @@ describe('All test', () => {
 
   it('inserting data at the end of the list', () => {
     let newLinkedLi = new LinkedList();
-    let one = newLinkedLi.insert('A');
-    let two = newLinkedLi.insert('B');
+    newLinkedLi.append('A');
+    newLinkedLi.append('B');
+    newLinkedLi.append('C');
+    newLinkedLi.append('F');
 
-    let three = newLinkedLi.insert('C');
-    let four = newLinkedLi.append('F');
 
-    let newValue = '{' + one + '} -> {' + two + '} -> { ' + three + '} -> { ' + four + ' } -> NULL';
-
-    expect(newLinkedLi.append()).toBe(newValue);
+    expect(newLinkedLi.toString()).toBe('{A} -> {B} -> {C} -> {F} -> NULL');
 
   });
   it('Adds a given node to the biggining of to the same endex ', () => {
