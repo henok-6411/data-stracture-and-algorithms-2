@@ -18,7 +18,7 @@ class LinkedList {
     let newNode = new Node(val);
     newNode.next = this.head;
     this.head = newNode;
-    console.log(newNode);
+    // console.log(newNode);
   }
   includes(val) {
     let current = this.head;
@@ -40,11 +40,8 @@ class LinkedList {
       current = current.next;
     }
     current.next = new Node(value);
-
   }
   insertBefore(value, newVal) {
-
-
     let current = this.head;
     let prevNode = this.null;
 
@@ -59,13 +56,12 @@ class LinkedList {
       if (current.val === value) {
         let newNode = new Node(newVal);
         prevNode.next = newNode;
-        console.log('currrrrr', newNode);
+        // console.log('currrrrr', newNode);
         newNode.next = current;
         return;
       }
       prevNode = current;
       current = current.next;
-
     }
   }
   insertAfter(value, newVal) {
@@ -83,14 +79,33 @@ class LinkedList {
       }
       current = current.next;
     }
+  }
+  kthFromEnd(k) {
+    let current = this.head.next;
+    let checker = this.head;
+    let counter = 0;
 
+    while (current) {
+      console.log('heyyyyyy', current);
+      console.log('h', checker.val);
+      console.log('heeee', k);
+
+      if (checker.val === k) {
+        counter++;
+        console.log('this is counter', counter);
+        if (counter === k) {
+          return checker.val;
+        }
+      }
+      return counter;
+    }
+    current = current.next;
   }
   toString() {
     let current = this.head;
-    console.log(current);
+    // console.log(current);
     let str = '';
     while (current) {
-
       str += '{' + current.val + '}' + '->';
       current = current.next;
     }
@@ -103,19 +118,15 @@ class LinkedList {
 
 let myNode = new LinkedList();
 
-
 myNode.insert(2);
-myNode.insert(5);
-myNode.insert(7);
-myNode.insert(9);
-myNode.append(45);
-myNode.insertBefore(5, 70);
-myNode.insertAfter(5, 70);
-
-
-
+myNode.insert(8);
+myNode.insert(3);
+myNode.insert(1);
+myNode.kthFromEnd(0);
+// myNode.insertBefore(5, 70);
+// myNode.insertAfter(5, 70);
 
 myNode.toString();
-console.log(myNode.includes(5));
+// console.log(myNode.includes(5));
 
-module.exports = { Node, LinkedList };
+module.exports = LinkedList;
