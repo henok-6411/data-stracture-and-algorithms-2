@@ -19,6 +19,7 @@ class LinkedList {
     newNode.next = this.head;
     this.head = newNode;
     // console.log(newNode);
+    return newNode;
   }
   includes(val) {
     let current = this.head;
@@ -81,26 +82,26 @@ class LinkedList {
     }
   }
   kthFromEnd(k) {
-    let current = this.head.next;
-    let checker = this.head;
-    let counter = 0;
-
-    while (current) {
-      console.log('heyyyyyy', current);
-      console.log('h', checker.val);
-      console.log('heeee', k);
-
-      if (checker.val === k) {
-        counter++;
-        console.log('this is counter', counter);
-        if (counter === k) {
-          return checker.val;
-        }
-      }
-      return counter;
+    let current = this.head;
+    let Kvalue = this.head;
+    if (current === null || k < 1) {
+      return null;
     }
-    current = current.next;
+    for (let i = 0; i < k - 1; i++) {
+      current = current.next;
+      if (current === null) {
+        return null;
+      }
+    }
+    while (current.next !== null) {
+      Kvalue = this.head.next;
+      current = current.next;
+      // console.log('current value', current);
+      return Kvalue.val;
+    }
+    return Kvalue;
   }
+
   toString() {
     let current = this.head;
     // console.log(current);
@@ -111,6 +112,7 @@ class LinkedList {
     }
     str += 'NULL';
     console.log(str);
+    return str;
   }
 }
 // let node1 = new Node();
@@ -121,8 +123,8 @@ let myNode = new LinkedList();
 myNode.insert(2);
 myNode.insert(8);
 myNode.insert(3);
-myNode.insert(1);
-myNode.kthFromEnd(0);
+
+myNode.kthFromEnd(1);
 // myNode.insertBefore(5, 70);
 // myNode.insertAfter(5, 70);
 
