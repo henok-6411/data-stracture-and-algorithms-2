@@ -8,9 +8,10 @@ class LindkedList {
   }
 
   mergeList(list1, list2) {
-    let before = this.head;
-    let current = this.head;
+    let before = list1;
+    let current = list2;
     let after;
+
     if (before === null) {
       after === null;
       list1.next = list2.next;
