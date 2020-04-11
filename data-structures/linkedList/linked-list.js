@@ -81,26 +81,24 @@ class LinkedList {
     }
   }
   kthFromEnd(k) {
-    let current = this.head.next;
-    let checker = this.head;
-    let counter = 0;
-
-    while (current) {
-      console.log('heyyyyyy', current);
-      console.log('h', checker.val);
-      console.log('heeee', k);
-
-      if (checker.val === k) {
-        counter++;
-        console.log('this is counter', counter);
-        if (counter === k) {
-          return checker.val;
-        }
-      }
-      return counter;
+    if (this.head === null || k < 1) {
+      return null;
     }
-    current = current.next;
+    let current = this.head;
+    let Kvalue = this.head;
+    for (let i = 0; i < k - 1; i++) {
+      current = current.next;
+      if (current === null) {
+        return null;
+      }
+    }
+    while (current.next) {
+      Kvalue = Kvalue.next;
+      current = current.next;
+    }
+    return Kvalue;
   }
+
   toString() {
     let current = this.head;
     // console.log(current);
@@ -111,6 +109,7 @@ class LinkedList {
     }
     str += 'NULL';
     console.log(str);
+    return str;
   }
 }
 // let node1 = new Node();
