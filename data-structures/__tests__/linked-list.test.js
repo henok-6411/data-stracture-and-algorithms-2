@@ -64,12 +64,12 @@ Where the linked list is of a size 1
 
   */
 
-  it(' Where k is greater than the length of the linked list', () => {
+  it(' where k is indicating the right value of node.', () => {
     let newlinked = new LinkedList();
-    newlinked.insert(1);
-    newlinked.insert(2);
-    newlinked.insert(3);
-    newlinked.insert(4);
+    newlinked.append(1);
+    newlinked.append(2);
+    newlinked.append(3);
+    newlinked.append(4);
     newlinked.kthFromEnd(2);
     expect(newlinked.toString()).toBe(2);
   });

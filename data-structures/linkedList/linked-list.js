@@ -83,23 +83,17 @@ class LinkedList {
   }
   kthFromEnd(k) {
     let current = this.head;
-    let Kvalue = this.head;
-    if (current === null || k < 1) {
-      return null;
-    }
-    for (let i = 0; i < k - 1; i++) {
+
+    if (k < 1) return false;
+    let array = [];
+
+    while (current) {
+      array.push(current.val);
       current = current.next;
-      if (current === null) {
-        return null;
-      }
     }
-    while (current.next !== null) {
-      Kvalue = this.head.next;
-      current = current.next;
-      // console.log('current value', current);
-      return Kvalue.val;
-    }
-    return Kvalue;
+    if (k > array.length) return false;
+
+    return array[array.length - 1 - k];
   }
 
   toString() {
@@ -120,9 +114,9 @@ class LinkedList {
 
 let myNode = new LinkedList();
 
-myNode.insert(2);
-myNode.insert(8);
-myNode.insert(3);
+myNode.append(2);
+myNode.append(8);
+myNode.append(3);
 
 myNode.kthFromEnd(1);
 // myNode.insertBefore(5, 70);

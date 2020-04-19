@@ -1,12 +1,11 @@
 {
-  "name": "data-structures",
+  "name": "stacksandqueues",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "node.js",
   "scripts": {
-    "start": "node index.js",
     "test": "jest --verbose --coverage"
   },
-  "author": "henok gebremedhn",
+  "author": "",
   "license": "ISC"
 }
