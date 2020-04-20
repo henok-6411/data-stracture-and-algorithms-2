@@ -1,24 +1,32 @@
 'use strict';
 const Node = require('./node.js');
 
-class stacks {
+class Stacks {
   constructor(val) {
     this.val = val;
   }
   push() {}
   pop() {}
   peek() {}
-  isEmpty() {}
+  isEmpty() {
+    if (!this.val) {
+      return true;
+    } else false;
+  }
 }
 
-class queues {
+class Queues {
   constructor(val) {
     this.val = val;
   }
   enqueue() {}
   dequeue() {}
   peek() {}
-  isEmpty() {}
+  isEmpty() {
+    if (!this.val) {
+      return true;
+    } else false;
+  }
 }
 
-module.exports = { stacks, queues };
+module.exports = { Stacks, Queues };
