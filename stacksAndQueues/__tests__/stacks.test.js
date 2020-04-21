@@ -1,8 +1,8 @@
 'use strict';
-const { Stacks } = require('../stacks-and-queues.js');
+const { Stack } = require('../Stacks-and-queues.js');
 /*
 Can successfully push onto a stack
-Can successfully push multiple values onto a stack
+Can successfully push multiples onto a stack
 Can successfully pop off the stack
 Can successfully empty a stack after multiple pops
 Can successfully peek the next item on the stack
@@ -13,14 +13,15 @@ Calling pop or peek on empty stack raises exception
 
 describe('happy path of stack', () => {
   it('can successfully push', () => {
-    let newStack = new Stacks();
+    let newStack = new Stack();
     newStack.push('henok');
 
+    console.log(newStack.isEmpty());
     expect(newStack.isEmpty()).toBe(false);
     expect(newStack.peek()).toBe('henok');
   });
-  it('can successfully push multiple value', () => {
-    let newStack = new Stacks();
+  it('can successfully push multiple', () => {
+    let newStack = new Stack();
     newStack.push('henok');
     newStack.push('filimon');
     expect(newStack.isEmpty()).toBe(false);
@@ -28,33 +29,35 @@ describe('happy path of stack', () => {
   });
 
   it('can pop multiple ', () => {
-    let newStack = new Stacks();
+    let newStack = new Stack();
     newStack.push('henok');
     newStack.push('filimon');
+    newStack.push('thomas');
     newStack.pop();
     newStack.pop();
+    newStack.pop();
+
     expect(newStack.isEmpty()).toBe(true);
-    expect(newStack.peek()).toBe(null);
+    expect(newStack.top).toBe(null);
   });
   it('can successfully pop off the stack ', () => {
-    let newStack = new Stacks();
+    let newStack = new Stack();
     newStack.push('henok');
     newStack.push('filimon');
     newStack.push('gebrem');
     expect(newStack.isEmpty()).toBe(false);
     expect(newStack.peek()).toBe('gebrem');
-
-    expect(newStack.pop().value).toBe('gebrem');
+    expect(newStack.pop().val).toBe('gebrem');
   });
   it('Can successfully instantiate an empty stack', () => {
-    let newStack = new Stacks();
+    let newStack = new Stack();
     expect(newStack.isEmpty()).toBe(true);
-    expect(newStack.top()).toBe(null);
+    expect(newStack.top).toBe(null);
   });
   it('calling pop or peek on empty stack raises exceptions', () => {
-    let newStack = new Stacks();
+    let newStack = new Stack();
     expect(newStack.isEmpty()).toBe(true);
-    expect(newStack.top()).toBe(null);
+    expect(newStack.top).toBe(null);
 
     expect(() => {
       newStack.pop();
