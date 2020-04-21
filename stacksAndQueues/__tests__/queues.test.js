@@ -41,8 +41,8 @@ describe('successful path of Queue', () => {
     newQueue.enqueue('menge');
     newQueue.enqueue('henok');
     newQueue.enqueue('kidus');
-    expect(newQueue.peek()).toBe('kidus');
     expect(newQueue.isEmpty()).toBe(false);
+    expect(newQueue.peek()).toBe('menge');
   });
   it('Can successfully empty a queue after multiple dequeue', () => {
     let newQueue = new Queue();

@@ -1,26 +1,23 @@
 # data-stracture-and-algorithms-2
 
-##  table of contents 
+## table of contents 
 
 ## 401 Code Challenges
 
-[arrayReverse](code-challenge/arrayReverse/array-reverse.js)
+[stacks-and-queues](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/11)
 
+##  Stack and Queues
 
-
-
-
-##  Reverse an Array
-* It will reverse the position of the given array from the end to the start. 
-
+- By using both methods how to push , remove , peek and check whether it's empty or not.
 
 ## Challenge
 
-* It was difficult to make reverse an array with out using any methods. like push reverse or reduse. 
+- It was difficult to debug my own test, It was tricky to write test for queue.
 
 ## Approach & Efficiency
-* I mostly use my brain before i dive in to google, but at the end i used goole. 
+
+- I used google to have a better understanding.
 
 ##  Solution
 
-![array-reverse](/assets/arrayReversepic.jpg)
+![array-reverse](assets/stack-and-queues.jpg)
