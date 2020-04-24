@@ -27,7 +27,7 @@ describe('successful path of Queue', () => {
     newQueue.enqueue('kidus');
     console.log(newQueue);
     expect(newQueue.isEmpty()).toBe(false);
-    expect(newQueue.rear).toBe('kidus');
+    expect(newQueue.peek()).toBe('menge');
   });
   it('Can successfully dequeue out of a queue the expected value', () => {
     let newQueue = new Queue();
