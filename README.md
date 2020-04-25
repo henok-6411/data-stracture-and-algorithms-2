@@ -6,9 +6,10 @@
 
 [stacks-and-queues](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/11)
 
-##  Stack and Queues
+##   Queues
 
-- By using both methods how to push , remove , peek and check whether it's empty or not.
+- By using all the methods how to push , remove , peek and check whether it's empty or not.
+- And also it specifically dequeue from the shelter cat or dog.
 
 ## Challenge
 
@@ -20,4 +21,4 @@
 
 ##  Solution
 
-![array-reverse](assets/stack-and-queues.jpg)
+![array-reverse](assets/animalShelter.jpg)
