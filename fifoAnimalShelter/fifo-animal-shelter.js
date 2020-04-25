@@ -20,16 +20,47 @@ class AnimalShelte {
     }
     this.rear.next = newAnimal;
     this.rear = newAnimal;
-    console.log(newAnimal);
   }
-  // dequeue(pref) {
-  // let pref = pref.dog;
-  // let pref = pref.cat;
-  // let dequFront = this.front;
-  // this.front = this.front.next;
-  // dequFront.next = null;
-  // return dequFront;
-  // }
+  // d <- d <- c <- d
+  dequeue(cat) {
+    let dequcat = this.front;
+    if (this.front === cat) {
+      this.front = this.front.next;
+      dequcat.next = null;
+      return dequcat;
+    } else {
+      while (this.front === cat) {
+        let current = this.front;
+        let pre = null;
+        current = current.next;
+        pre.next = pre;
+        pre.next = current.next;
+        current.next = null;
+        return current;
+      }
+    }
+  }
+  // c <- d <- c <- c
+  dequeue(dog) {
+    let dequDog = this.front;
+    if (this.front === dog) {
+      this.front = this.front.next;
+      dequDog.next = null;
+      return dequDog;
+    } else {
+      while (this.front === cat) {
+        let current = this.front;
+        let pre = null;
+        current = current.next;
+        pre.next = current;
+        current.next = pre;
+        current.next = current;
+        pre.next = current.next;
+        current.next = null;
+        return current;
+      }
+    }
+  }
   peek() {
     if (this.isEmpty()) {
       throw 'NOTHING TO PICK';
