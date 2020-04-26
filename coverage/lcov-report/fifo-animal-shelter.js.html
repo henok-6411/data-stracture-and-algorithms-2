@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">69.23% </span>
+                <span class="strong">82.05% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>27/39</span>
+                <span class='fraction'>32/39</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.11% </span>
+                <span class="strong">77.78% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/18</span>
+                <span class='fraction'>14/18</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.05% </span>
+                <span class="strong">84.21% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>27/38</span>
+                <span class='fraction'>32/38</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -164,26 +164,26 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -239,18 +239,18 @@ class AnimalShelte {
     while (current) {
       let dequeAnimal = current.val;
 &nbsp;
-      <span class="missing-if-branch" title="if path not taken" >I</span>if (dequeAnimal.species === pref) {
-<span class="cstat-no" title="statement not covered" >        if (!pre) {</span>
+      if (dequeAnimal.species === pref) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!pre) {
 <span class="cstat-no" title="statement not covered" >          this.front = current.next;</span>
 <span class="cstat-no" title="statement not covered" >          current.next = null;</span>
 <span class="cstat-no" title="statement not covered" >          console.log(current);</span>
 <span class="cstat-no" title="statement not covered" >          return current;</span>
         }
-<span class="cstat-no" title="statement not covered" >        pre.next = current.next;</span>
-<span class="cstat-no" title="statement not covered" >        if (!current.next) <span class="cstat-no" title="statement not covered" >this.rear = pre;</span></span>
+        pre.next = current.next;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!current.next) <span class="cstat-no" title="statement not covered" >this.rear = pre;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        current.next = null;</span>
-<span class="cstat-no" title="statement not covered" >        return current;</span>
+        current.next = null;
+        return current;
       }
 &nbsp;
       pre = current;
@@ -283,7 +283,7 @@ module.exports = AnimalShelte;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Apr 25 2020 20:59:30 GMT-0700 (Pacific Daylight Time)
+                at Sun Apr 26 2020 15:24:58 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>
