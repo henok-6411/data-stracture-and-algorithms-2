@@ -25,20 +25,26 @@ describe('The happy path of animal shelter', () => {
     newAnimal.enqueue(endDog3);
     expect(newAnimal.isEmpty()).toBe(false);
     let dequeAnimal = newAnimal.dequeue('cat');
-    console.log(dequeAnimal.val);
+
     expect(dequeAnimal.val.species).toBe('cat');
   });
   it('It can successfully dequeue a dog from the shelter', () => {
     let newAnimal = new AnimalShelte();
-    let deqDog = new Animals.Dog('dog');
+    let enqueAnimal1 = new Animals.Cat('cat1');
+    let enqueAnimal2 = new Animals.Dog('dog');
+    let enqueAnimal3 = new Animals.Cat('cat2');
+    let enqueAnimal4 = new Animals.Cat('cat3');
+
     // console.log(deqDog);
-    newAnimal.enqueue('cat1');
-    newAnimal.enqueue('dog');
-    newAnimal.enqueue('cat2');
-    newAnimal.enqueue('cat3');
+    newAnimal.enqueue(enqueAnimal1);
+    newAnimal.enqueue(enqueAnimal2);
+    newAnimal.enqueue(enqueAnimal3);
+    newAnimal.enqueue(enqueAnimal4);
+
+    let dequeAnimal = newAnimal.dequeue('dog');
     // console.log(newAnimal);
     expect(newAnimal.isEmpty()).toBe(false);
-
-    expect(newAnimal.dequeue('dog')).toBe('dog');
+    console.log(dequeAnimal.val);
+    expect(dequeAnimal.val.species).toBe('dog');
   });
 });
