@@ -4,7 +4,7 @@
 
 ## 401 Code Challenges
 
-[stacks-and-queues](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/11)
+[stacks-and-queues](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/12)
 
 ##   Queues
 

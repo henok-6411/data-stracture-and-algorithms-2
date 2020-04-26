@@ -1,15 +1,16 @@
 'use strict';
+const Animals = require('./animal.js');
+
 class Node {
   constructor(val) {
     this.val = val;
-    this.dog = null;
-    this.cat = null;
     this.next = null;
   }
 }
 class AnimalShelte {
-  constructor(val) {
-    this.val = val;
+  constructor() {
+    this.front = null;
+    this.rear = null;
   }
   enqueue(val) {
     let newAnimal = new Node(val);
@@ -22,44 +23,35 @@ class AnimalShelte {
     this.rear = newAnimal;
   }
   // d <- d <- c <- d
-  dequeue(cat) {
-    let dequcat = this.front;
-    if (this.front === cat) {
-      this.front = this.front.next;
-      dequcat.next = null;
-      return dequcat;
-    } else {
-      while (this.front === cat) {
-        let current = this.front;
-        let pre = null;
-        current = current.next;
-        pre.next = pre;
-        pre.next = current.next;
-        current.next = null;
-        return current;
-      }
-    }
-  }
   // c <- d <- c <- c
-  dequeue(dog) {
-    let dequDog = this.front;
-    if (this.front === dog) {
-      this.front = this.front.next;
-      dequDog.next = null;
-      return dequDog;
-    } else {
-      while (this.front === cat) {
-        let current = this.front;
-        let pre = null;
-        current = current.next;
-        pre.next = current;
-        current.next = pre;
-        current.next = current;
+  dequeue(pref) {
+    if (!pref === 'dog' || !pref === 'cat') {
+      return null;
+    }
+    let current = this.front;
+    let pre = null;
+
+    while (current) {
+      let dequeAnimal = current.val;
+
+      if (dequeAnimal.species === pref) {
+        if (!pre) {
+          this.front = current.next;
+          current.next = null;
+          console.log(current);
+          return current;
+        }
         pre.next = current.next;
+        if (!current.next) this.rear = pre;
+
         current.next = null;
         return current;
       }
+
+      pre = current;
+      current = current.next;
     }
+    return null;
   }
   peek() {
     if (this.isEmpty()) {
