@@ -67,9 +67,9 @@ class MultiBracket {
       }
     }
     if (!this.top) {
-      return false;
-    } else {
       return true;
+    } else {
+      return false;
     }
   }
 }

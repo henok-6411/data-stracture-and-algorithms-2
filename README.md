@@ -6,14 +6,14 @@
 
 [stacks-and-queues](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/12)
 
-##   Queues
+##  Multi-bracket Validation.
 
 - By using all the methods how to push , remove , peek and check whether it's empty or not.
-- And also it specifically dequeue from the shelter cat or dog.
+- And also it specifically return boolean after compering each value from the stack and outside the stack.
 
 ## Challenge
 
-- It was difficult to debug my own test, It was tricky to write test for queue.
+- It was difficult to debug my own test, It was tricky to write test for validation.
 
 ## Approach & Efficiency
 
@@ -21,4 +21,4 @@
 
 ##  Solution
 
-![array-reverse](assets/animalShelter.jpg)
+![array-reverse](assets/multiBracket.jpg)

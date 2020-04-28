@@ -7,4 +7,9 @@ describe('THE HAPPY PATH OF VALIDATE BRACKETS', () => {
     newBracket.push('(', '[', '{', '}', ']', ')');
     expect(newBracket.BooleanValidater()).toBe(true);
   });
+  it('It successfully check there brackets does not much', () => {
+    let newBracket = new MultiBracketValidate();
+    newBracket.push('(', '[', '{', '}', ']');
+    expect(newBracket.BooleanValidater()).toBe(false);
+  });
 });
