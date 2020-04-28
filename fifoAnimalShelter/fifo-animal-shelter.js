@@ -1,5 +1,5 @@
 'use strict';
-const Animals = require('./animal.js');
+// const Animals = require('./animal.js');
 
 class Node {
   constructor(val) {
