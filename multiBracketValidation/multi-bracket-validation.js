@@ -5,6 +5,7 @@ class Node {
     this.next = null;
   }
 }
+
 class MultiBracket {
   constructor() {
     this.top = null;
@@ -43,35 +44,43 @@ class MultiBracket {
       false;
     }
   }
-  BooleanValidater(val) {
-    let newValue = new Node(val);
-    let current;
-    let previous;
-    for (let i = 0; i < newValue.length; i++) {
-      current = this.newValue.charAt(i);
-      if (current === '(' || current === '[' || current === '{') {
-        this.push(current);
-      } else if (current === ')' || current === ']' || current === '}') {
-        if (this.isEmpty()) {
-          return false;
-        } else {
-          previous = this.top.peek();
-          if (
-            (current === ')' && previous === ')') ||
-            (current === '[' && previous === ']') ||
-            (current === '{' && previous === '}')
-          ) {
-            this.top.pop();
-          }
+}
+
+const BooleanValidater = (val) => {
+  let newValue = new MultiBracket();
+  let newValueSplit = val.split('');
+
+  for (let i = 0; i < newValueSplit.length; i++) {
+    if (
+      newValueSplit[i] === '(' ||
+      newValueSplit[i] === '[' ||
+      newValueSplit[i] === '{'
+    ) {
+      newValue.push(newValueSplit[i]);
+      console.log(newValue.val);
+    } else if (
+      newValueSplit[i] === ')' ||
+      newValueSplit[i] === ']' ||
+      newValueSplit[i] === '}'
+    ) {
+      if (newValue.isEmpty()) {
+        return false;
+      } else {
+        if (
+          (newValueSplit[i] === ')' && newValue.pop() === '(') ||
+          (newValueSplit[i] === ']' && newValue.pop() === '[') ||
+          (newValueSplit[i] === '}' && newValue.pop() === '{')
+        ) {
+          return true;
         }
       }
     }
-    if (!this.top) {
-      return true;
-    } else {
-      return false;
-    }
   }
-}
+  if (!newValue.top) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
-module.exports = MultiBracket;
+module.exports = BooleanValidater;
