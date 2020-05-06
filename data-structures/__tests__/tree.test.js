@@ -90,26 +90,25 @@ describe('A happy path of tree', () => {
   it('You can successfully add a value to a binary search tree', () => {
     let tree = new BST();
     tree.root = new Node(20);
-    tree.root.left = new Node(15);
-    tree.root.right.left = new Node(21);
-    tree.root.left.left = new Node(7);
-    tree.root.left.right = new Node(17);
+    // tree.root.left = new Node(15);
+    // tree.root.right.left = new Node(21);
+    // tree.root.left.left = new Node(7);
+    // tree.root.left.right = new Node(17);
 
     tree.add(30);
-    tree.add(25);
+    tree.add(15);
 
-    expect(tree.preOrder()).toEqual([20, 7, 15, 17, 21, 30, 25]);
+    expect(tree.preOrder()).toEqual([20, 15, 30]);
   });
-  xit('You can search a binary search tree for a value and get the correct true/false result', () => {
+  it('You can search a binary search tree for a value and get the correct true/false result', () => {
     let tree = new BST();
-    let newNode = new Node(20);
-    tree.root = newNode;
+    tree.root = new Node(20);
     tree.root.left = new Node(15);
-    tree.root.right.left = new Node(21);
+    tree.root.right = new Node(21);
     tree.root.left.left = new Node(7);
     tree.root.left.right = new Node(17);
 
-    expect(tree.contains(4)).toBe(false);
-    expect(tree.contains(30)).toBe(true);
+    expect(tree.contains(10)).toBe(false);
+    expect(tree.contains(21)).toBe(true);
   });
 });

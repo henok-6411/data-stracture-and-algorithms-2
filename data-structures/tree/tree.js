@@ -76,11 +76,11 @@ class BinarySearchTree extends BinaryTree {
       this.root = new Node(val);
       return;
     }
+
     let current = this.root;
-    console.log('my add function', current);
     while (current) {
       if (current.val > val) {
-        if (!current.val) {
+        if (!current.left) {
           current.left = new Node(val);
           return;
         } else {
@@ -91,13 +91,29 @@ class BinarySearchTree extends BinaryTree {
           current.right = new Node(val);
           return;
         } else {
-          current.right = current;
+          current = current.right;
         }
       }
     }
   }
 
-  // contains(val) {}
+  contains(val) {
+    if (!this.root) {
+      return false;
+    }
+    let current = this.root;
+    // let nodeValue = new Node(val);
+    while (current) {
+      if (current.val < val) {
+        current = current.right;
+      } else if (current.val > val) {
+        current = current.left;
+      } else if (current.val === val) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
 
 module.exports = { Node, BinaryTree, BinarySearchTree };
