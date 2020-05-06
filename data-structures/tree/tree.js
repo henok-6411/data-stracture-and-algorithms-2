@@ -87,26 +87,26 @@ class BinarySearchTree extends BinaryTree {
     }
   }
 
-  // contains(val) {
-  //   if (this.val === val) {
-  //     return true;
-  //   }
+  contains(val) {
+    if (this.val === val) {
+      return true;
+    }
 
-  //   let newTree = new BinaryTree(val);
-  //   let rootArray = [];
-  //   if (!this.root) {
-  //     this.root = newTree;
-  //     return rootArray.push(newTree.val);
-  //   }
-  //   let current = newTree.val;
-  //   while (current.next) {
-  //     checker.push(current);
-  //     if (checker.includes(current)) {
-  //       return true;
-  //     }
-  //   }
-  //   return false;
-  // }
+    let newTree = new BinaryTree(val);
+    let rootArray = [];
+    if (!this.root) {
+      this.root = newTree;
+      return rootArray.push(newTree.val);
+    }
+    let current = newTree.val;
+    while (current.next) {
+      rootArray.push(current);
+      if (rootArray.includes(current)) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
 
 let tree = new BinarySearchTree();
