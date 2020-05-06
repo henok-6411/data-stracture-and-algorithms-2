@@ -1,7 +1,7 @@
 'use strict';
 class Node {
-  constructor() {
-    this.val = null;
+  constructor(val) {
+    this.val = val;
     this.left = null;
     this.right = null;
   }
@@ -11,118 +11,93 @@ class BinaryTree {
   constructor() {
     this.root = null;
   }
-  add(val) {
-    let newNode = new Node(val);
-    if (!this.root) {
-      this.root = newNode;
-      return;
-    }
-  }
+  preOrder(root = this.root) {
+    if (!root) return;
 
-  preOrder(root) {
     let visitedArray = [];
-    if (root === null) {
-      visitedArray.push(root.val);
-      return visitedArray;
-    }
+    let leftArr = [];
+
+    let rightArr = [];
+
+    visitedArray.push(root.val);
     if (root.left) {
-      this.preOrder(root.left);
+      leftArr = this.preOrder(root.left);
     }
     if (root.right) {
-      this.preOrder(root.right);
+      rightArr = this.preOrder(root.right);
     }
+    visitedArray = [...visitedArray, ...leftArr, ...rightArr];
+
     return visitedArray;
   }
-  inOrder(root) {
+  inOrder(root = this.root) {
     let visitedArray = [];
+    let leftArr = [];
+    let rightArr = [];
 
     if (root.left) {
-      this.inOrder(root.left);
+      leftArr = this.inOrder(root.left);
     }
     visitedArray.push(root.val);
 
     if (root.right) {
-      this.inOrder(root.right);
+      rightArr = this.inOrder(root.right);
     }
+
+    visitedArray = [...leftArr, ...visitedArray, ...rightArr];
+
     return visitedArray;
   }
-  pastOrder(root) {
+  pastOrder(root = this.root) {
     let visitedArray = [];
+    let leftArr = [];
+    let rightArr = [];
 
     if (root.left) {
-      this.pastOrder(root.left);
+      leftArr = this.pastOrder(root.left);
     }
     if (root.right) {
-      this.pastOrder(root.right);
+      rightArr = this.pastOrder(root.right);
     }
-    return visitedArray.push(root.val);
+    visitedArray.push(root.val);
+
+    visitedArray = [...leftArr, ...rightArr, ...visitedArray];
+
+    return visitedArray;
   }
 }
 
 class BinarySearchTree extends BinaryTree {
+  constructor() {
+    super();
+  }
   add(val) {
-    let newTree = new Node(val);
     if (!this.root) {
-      this.root = newTree;
-      console.log('newtree at the beggining', newTree);
-    } else {
-      this.addNode(newTree);
+      this.root = new Node(val);
+      return;
     }
-  }
-  addNode(newTree, val) {
-    console.log('newtree value', newTree);
-    if (newTree.val < val) {
-      if (this.left === null) {
-        this.left = val;
-      } else {
-        this.left.addNode(val);
-      }
-    }
-    if (newTree.val > val) {
-      if (this.right === null) {
-        this.right = val;
-      } else {
-        this.right.addNode(val);
+    let current = this.root;
+    console.log('my add function', current);
+    while (current) {
+      if (current.val > val) {
+        if (!current.val) {
+          current.left = new Node(val);
+          return;
+        } else {
+          current = current.left;
+        }
+      } else if (current.val < val) {
+        if (!current.right) {
+          current.right = new Node(val);
+          return;
+        } else {
+          current.right = current;
+        }
       }
     }
   }
 
-  contains(val) {
-    if (this.val === val) {
-      return true;
-    }
-
-    let newTree = new BinaryTree(val);
-    let rootArray = [];
-    if (!this.root) {
-      this.root = newTree;
-      return rootArray.push(newTree.val);
-    }
-    let current = newTree.val;
-    while (current.next) {
-      rootArray.push(current);
-      if (rootArray.includes(current)) {
-        return true;
-      }
-    }
-    return false;
-  }
+  // contains(val) {}
 }
 
-let tree = new BinarySearchTree();
-console.log('this is preOrder', tree);
-
-tree.add(50);
-tree.add(14);
-tree.add(57);
-tree.add(9);
-tree.add(19);
-tree.add(31);
-tree.add(62);
-tree.add(3);
-tree.add(11);
-tree.add(72);
-
-// console.log('root is', tree);
-
-module.exports = BinarySearchTree;
+module.exports = { Node, BinaryTree, BinarySearchTree };

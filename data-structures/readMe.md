@@ -1,41 +1,26 @@
-# LAB - Class 07 Code Challenge
+# LAB - Class 15 Code Challenge
 
-## Project Name : Code Challenge
+## Project Name : binarytree
 
 ### Author: Henok Gebremedhn
 
 ### Links and Resources
 
-- [submission PR](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/9)
-
-### DOCUMENTATION
-
-[jsdoc](https://lab-401-demo.herokuapp.com/docs/)
+- [submission PR](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/14)
 
 ### Setup
 
 #### `.env` requirements (where applicable)
 
-i.e.
-
-- `PORT` - Port Number
-
 #### How to initialize/run your application (where applicable)
 
-- node linked-list.js
-
-#### How to use your library (where applicable)
-
-- Haven't publish it to npm.
+- node tree.js
 
 #### Tests
 
 - unit tests: 'npm test'
 - lint test: 'npm run lint'
 
-* Describe any tests that you did not complete, skipped, etc
-* the Before inserting value didn't work for me.
-
 #### UML
 
-![](./assets/image/k-fromEnd.jpg)
+![](./assets/image/binarytree.jpg)
