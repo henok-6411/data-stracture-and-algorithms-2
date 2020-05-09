@@ -4,7 +4,7 @@
 
 ## 401 Code Challenges
 
-[stacks-and-queues](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/12)
+[PR trees]()
 
 ##  Multi-bracket Validation.
 
@@ -21,4 +21,4 @@
 
 ##  Solution
 
-![array-reverse](assets/multiBracket.jpg)
+![binarytree](./assets/image/binarytree.jpg)
