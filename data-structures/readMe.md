@@ -1,12 +1,12 @@
-# LAB - Class 15 Code Challenge
+# LAB - Class 16 Code Challenge
 
-## Project Name : binarytree
+## Project Name : FizzBuzz
 
 ### Author: Henok Gebremedhn
 
 ### Links and Resources
 
-- [submission PR](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/14)
+- [submission PR](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/15)
 
 ### Setup
 
@@ -23,4 +23,4 @@
 
 #### UML
 
-![](./assets/image/binarytree.jpg)
+![]()

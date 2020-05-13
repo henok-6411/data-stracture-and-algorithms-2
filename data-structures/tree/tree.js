@@ -96,6 +96,46 @@ class BinarySearchTree extends BinaryTree {
       }
     }
   }
+  enqueue(val) {
+    let current = new Node(val);
+    if (!this.rear || !this.front) {
+      this.front = current;
+      this.rear = current;
+    }
+    this.rear.next = current;
+    current = this.rear;
+  }
+  dequeue() {
+    let dequefront = this.front;
+    if (!this.front) {
+      return;
+    }
+    this.front = this.front.next;
+    dequefront.next = null;
+    return dequefront;
+  }
+  breadthFirst(root) {
+    // let rootValue = [];
+    // let leftValue = [];
+    // let rightValue = [];
+
+    let newValue = new Node();
+    console.log(newValue);
+    newValue.enqueue(root);
+
+    while () {
+      let currentNode = newValue.front;
+      newValue.dequeue();
+      if (currentNode.left) {
+        newValue.enqueue(currentNode.left);
+      }
+      if (currentNode.right) {
+        newValue.enqueue(currentNode.right);
+      }
+    }
+
+    return newValue;
+  }
 
   contains(val) {
     if (!this.root) {

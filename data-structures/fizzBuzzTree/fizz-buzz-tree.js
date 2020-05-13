@@ -7,8 +7,10 @@ class Node {
   }
 }
 class BinaryTree {
-  constructor() {
-    this.root = null;
+  constructor(val) {
+    this.root = val;
+    this.left = null;
+    this.right = null;
   }
   preOrder(root = this.root) {
     if (!this.root) {
@@ -100,48 +102,30 @@ const FizzBuzzTree = (root) => {
   if (!root) {
     return;
   }
-  let current = root;
+  let allRoot = '';
 
-  console.log('tree current', current);
-  if (current.val % 3 === 0) {
-    current.val = 'fizz';
-    console.log(current.val);
-  } else if (current.val % 5 === 0) {
-    current.val = 'Buzz';
+  if (root.val % 3 === 0) {
+    allRoot += 'fizz';
   }
-  if (current.val % 15 === 0) {
-    current.val = 'FizzBuzz';
+  if (root.val % 5 === 0) {
+    allRoot += 'Buzz';
   }
-  if (current.left) {
-    console.log('left', current.left);
-    FizzBuzzTree(current.left);
+  if (root.val % 15 === 0) {
+    allRoot += 'FizzBuzz';
   }
-  if (current.right) {
-    FizzBuzzTree(current.right);
+  let newNode = new Node(allRoot ? allRoot : `${root.val}`);
+
+  if (root.left) {
+    newNode.left = FizzBuzzTree(root.left);
+  }
+  if (root.right) {
+    newNode.right = FizzBuzzTree(root.right);
   }
 
-  // if (current.val > tree.val) {
-  //   if (current.left.val % 3 === 0) {
-  //     current.left = new Node('fizz');
-  //   } else if (current.left.val % 5 === 0) {
-  //     current.left = new Node('Buzz');
-  //   }
-  //   if (current.left.val % 15 === 0) {
-  //     current.left = new Node('FizzBuzz');
-  //   }
-  // } else if (current.val < tree.val) {
-  //   if (current.right.val % 3 === 0) {
-  //     current.right = new Node('fizz');
-  //   }
-  //   if (current.right.val % 5 === 0) {
-  //     current.right = new Node('Buzz');
-  //   }
-  //   if (current.right.val % 15 === 0) {
-  //     current.right = new Node('FizzBuzz');
-  //   }
-  // }
+  // console.log('the first line', allRoot);
 
-  return root;
+  // console.log('the first line', newNode);
+  return allRoot;
 };
 
 module.exports = { Node, BinaryTree, added, FizzBuzzTree };
