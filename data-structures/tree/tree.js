@@ -98,11 +98,6 @@ class BinaryTree {
     return visitedArray;
   }
   breadthFirst(root = this.root) {
-    // if (!root.left && !root.right) {
-    //   console.log('root', root.val);
-    //   return root.val;
-    // }
-
     let queueArray = [];
     let q = new Queue();
     q.enqueue(root);
@@ -120,6 +115,18 @@ class BinaryTree {
       console.log('deque array', queueArray);
     }
     return queueArray;
+  }
+  findMaximumValue(root = this.root) {
+    let maxVal = 0;
+    if (root.right === null) {
+      return;
+    }
+    if (root.right.val > maxVal) {
+      maxVal = root.right.val;
+    }
+    this.findMaximumValue(root.right);
+    console.log('recursion ', root.right.val);
+    return maxVal;
   }
 }
 

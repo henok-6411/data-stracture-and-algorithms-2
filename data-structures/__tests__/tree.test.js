@@ -112,7 +112,7 @@ describe('A happy path of tree', () => {
   });
 });
 
-describe('the happy path of breadthFirst', () => {
+xdescribe('the happy path of breadthFirst', () => {
   it('It can successfully traverse breadthFirst way ', () => {
     let tree = new BT();
     tree.root = new Node(20);
@@ -124,5 +124,18 @@ describe('the happy path of breadthFirst', () => {
     tree.root.left.right = new Node(17);
 
     expect(tree.breadthFirst()).toEqual([20, 15, 25, 21, 30, 7, 17]);
+  });
+});
+describe('the happy path of find-maximum-binary-tree', () => {
+  it('It can successfully traverse and find the max value ', () => {
+    let tree = new BT();
+    tree.root = new Node(20);
+    tree.root.left = new Node(15);
+    tree.root.right = new Node(25);
+    tree.root.right.left = new Node(21);
+    tree.root.right.right = new Node(30);
+    tree.root.left.left = new Node(7);
+    tree.root.left.right = new Node(17);
+    expect(tree.findMaximumValue()).toEqual(30);
   });
 });
