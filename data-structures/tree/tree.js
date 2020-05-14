@@ -2,11 +2,43 @@
 class Node {
   constructor(val) {
     this.val = val;
-    this.left = null;
     this.right = null;
+    this.left = null;
   }
 }
+class Qnode {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+class Queue {
+  constructor() {
+    this.front = null;
+    this.rear = null;
+  }
+  enqueue(val) {
+    let current = new Qnode(val);
+    if (!this.rear || !this.front) {
+      this.front = current;
+      this.rear = current;
+      return;
+    }
+    this.rear.next = current;
+    current = this.rear;
+  }
+  dequeue() {
+    if (!this.front) {
+      return;
+    }
 
+    let dequefront = this.front;
+    this.front = this.front.next;
+
+    dequefront.next = null;
+    return dequefront.val;
+  }
+}
 class BinaryTree {
   constructor() {
     this.root = null;
@@ -65,6 +97,30 @@ class BinaryTree {
 
     return visitedArray;
   }
+  breadthFirst(root = this.root) {
+    // if (!root.left && !root.right) {
+    //   console.log('root', root.val);
+    //   return root.val;
+    // }
+
+    let queueArray = [];
+    let q = new Queue();
+    q.enqueue(root);
+
+    while (q.front) {
+      if (q.front.val.left) {
+        q.front.val.left = q.enqueue(q.front.val.left);
+      }
+
+      if (q.front.val.right) {
+        q.front.val.right = q.enqueue(q.front.val.right);
+      }
+      let dequeValue = q.dequeue();
+      queueArray.push(dequeValue.val);
+      console.log('deque array', queueArray);
+    }
+    return queueArray;
+  }
 }
 
 class BinarySearchTree extends BinaryTree {
@@ -95,46 +151,6 @@ class BinarySearchTree extends BinaryTree {
         }
       }
     }
-  }
-  enqueue(val) {
-    let current = new Node(val);
-    if (!this.rear || !this.front) {
-      this.front = current;
-      this.rear = current;
-    }
-    this.rear.next = current;
-    current = this.rear;
-  }
-  dequeue() {
-    let dequefront = this.front;
-    if (!this.front) {
-      return;
-    }
-    this.front = this.front.next;
-    dequefront.next = null;
-    return dequefront;
-  }
-  breadthFirst(root) {
-    // let rootValue = [];
-    // let leftValue = [];
-    // let rightValue = [];
-
-    let newValue = new Node();
-    console.log(newValue);
-    newValue.enqueue(root);
-
-    while () {
-      let currentNode = newValue.front;
-      newValue.dequeue();
-      if (currentNode.left) {
-        newValue.enqueue(currentNode.left);
-      }
-      if (currentNode.right) {
-        newValue.enqueue(currentNode.right);
-      }
-    }
-
-    return newValue;
   }
 
   contains(val) {
