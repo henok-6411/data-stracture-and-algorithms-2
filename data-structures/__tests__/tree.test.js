@@ -53,8 +53,9 @@ describe('A happy path of tree', () => {
     tree.root.right.right = new Node(30);
 
     /* 
-              20
-          15      25 
+              200
+
+          100      295 
        7     17  21   30                              
                             
               
@@ -139,3 +140,9 @@ describe('the happy path of find-maximum-binary-tree', () => {
     expect(tree.findMaximumValue()).toEqual(30);
   });
 });
+
+// 20
+//    25
+
+//
+//

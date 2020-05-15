@@ -118,14 +118,32 @@ class BinaryTree {
   }
   findMaximumValue(root = this.root) {
     let maxVal = 0;
-    if (root.right === null) {
-      return;
+    let leftVal = 0;
+    let rightVal = 0;
+
+    if (root.right === null && root.left === null) {
+      return root.val;
     }
-    if (root.right.val > maxVal) {
-      maxVal = root.right.val;
+    // 25 > 0
+    // 25 > 30
+
+    if (root.right) {
+      rightVal = this.findMaximumValue(root.right);
     }
-    this.findMaximumValue(root.right);
+    if (root.left) {
+      leftVal = this.findMaximumValue(root.left);
+    }
+    if (rightVal > leftVal) {
+      maxVal = rightVal;
+    } else {
+      maxVal = leftVal;
+    }
+    if (root.val > maxVal) {
+      maxVal = root.val;
+    }
+
     console.log('recursion ', root.right.val);
+    console.log('root', root.val);
     return maxVal;
   }
 }
