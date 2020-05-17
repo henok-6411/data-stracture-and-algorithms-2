@@ -1,6 +1,5 @@
 # data-stracture-and-algorithms-2
 
-# data-stracture-and-algorithms-2
 
 # Challenge Summary
 
