@@ -15,4 +15,4 @@
 
 ## Solution
 
-![getMaxValue](data-structures/assets/image/getmaxVal.jpg)
+![getMaxValue](assets/image/getmaxVal.jpg)
