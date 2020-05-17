@@ -1,26 +1,19 @@
 # data-stracture-and-algorithms-2
 
-##  table of contents 
+# data-stracture-and-algorithms-2
 
-## 401 Code Challenges
+# Challenge Summary
 
-[arrayReverse](code-challenge/arrayReverse/array-reverse.js)
+- Getting the maximum value from a tree. I wrote a method on my previous binaryTree class.
 
+## Challenge Description
 
+- It was kind of tricky to use recursion method and follow the output while the recursion is happening.
 
+## Approach & Efficiency
 
+- I used the previous preOrder and inOrder method of class to get all the value of the tree.
 
-##  Reverse an Array
-* It will reverse the position of the given array from the end to the start. 
+## Solution
 
-
-## Challenge
-
-* It was difficult to make reverse an array with out using any methods. like push reverse or reduse. 
-
-## Approach & Efficiency
-* I mostly use my brain before i dive in to google, but at the end i used goole. 
-
-##  Solution
-
-![array-reverse](/assets/arrayReversepic.jpg)
+![getMaxValue](data-structures/assets/image/getmaxVal.jpg)
