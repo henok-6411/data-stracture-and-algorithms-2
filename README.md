@@ -1,24 +1,17 @@
 # data-stracture-and-algorithms-2
 
-## table of contents 
+# Challenge Summary
 
-## 401 Code Challenges
+- Getting the maximum value from a tree. I wrote a method on my previous binaryTree class.
 
-[PR trees]()
+## Challenge Description
 
-##  Multi-bracket Validation.
+- It was kind of tricky to use recursion method and follow the output while the recursion is happening.
 
-- By using all the methods how to push , remove , peek and check whether it's empty or not.
-- And also it specifically return boolean after compering each value from the stack and outside the stack.
+## Approach & Efficiency
 
-## Challenge
+- I used the previous preOrder and inOrder method of class to get all the value of the tree.
 
-- It was difficult to debug my own test, It was tricky to write test for validation.
+## Solution
 
-## Approach & Efficiency
-
-- I used google to have a better understanding.
-
-##  Solution
-
-![binarytree](./assets/image/binarytree.jpg)
+![getMaxValue](data-structures/assets/image/getmaxVal.jpg)
