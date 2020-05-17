@@ -1,26 +1,15 @@
-# LAB - Class 16 Code Challenge
+# Challenge Summary
 
-## Project Name : FizzBuzz
+- Getting the maximum value from a tree. I wrote a method on my previous binaryTree class.
 
-### Author: Henok Gebremedhn
+## Challenge Description
 
-### Links and Resources
+- It was kind of tricky to use recursion method and follow the output while the recursion is happening.
 
-- [submission PR](https://github.com/henok-6411/data-stracture-and-algorithms-2/pull/15)
+## Approach & Efficiency
 
-### Setup
+- I used the previous preOrder and inOrder method of class to get all the value of the tree.
 
-#### `.env` requirements (where applicable)
+## Solution
 
-#### How to initialize/run your application (where applicable)
-
-- node tree.js
-
-#### Tests
-
-- unit tests: 'npm test'
-- lint test: 'npm run lint'
-
-#### UML
-
-![]()
+![getMaxValue](./assets/image/getmaxVal.jpg)
