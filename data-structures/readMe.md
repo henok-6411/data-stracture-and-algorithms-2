@@ -12,4 +12,4 @@
 
 ## Solution
 
-![getMaxValue](./assets/image/getmaxVal.jpg)
+![getMaxValue](/assets/image/getmaxVal.jpg)
