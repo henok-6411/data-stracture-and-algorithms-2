@@ -3,8 +3,9 @@
 # Insertion sort 
 # Challenge Summary
 
-- Pseudocode Need to be trace the Algorithm.  
-- SelectionSort(int[] arr)
+```
+ Pseudocode Need to be trace the Algorithm.  
+ SelectionSort(int[] arr)
        DECLARE n <-- arr.Length;
        FOR i = 0; i to n - 1  
         DECLARE min <-- i;
@@ -14,7 +15,8 @@
 
         DECLARE temp <-- arr[min];
         arr[min] <-- arr[i];
-        arr[i] <-- temp;
+        arr[i] <-- temp; 
+```
 
 ## Challenge Description
 
