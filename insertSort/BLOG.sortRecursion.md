@@ -35,3 +35,13 @@ ALGORITHM Merge(left, right, arr)
        set remaining entries in arr to remaining values in left
 ```
 
+Example of Given Array `arr = [8,6,9,3,1,90,4,89]`
+How the recursion works 
+1.   `   `[8,6,9,3,1,90,4,89,100]`
+2.    `[8,6,9,3,]`    `[1,90,4,89,100]`
+3. `[8,6,]``[9,3,]`   `[1,90]`[4,89,100]`
+4. `[6,8]` `[3,9]`    `[1,90]`  `[4]`  `[89,100]` 
+5. `[3,6,8,9]`         `[1,90]`   `[4,89,100]`
+6.    `                 `[1,4,89,90,100]
+7. All together `[1,3,4,6,8,9,89,90,100]`
+  

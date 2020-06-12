@@ -1,4 +1,9 @@
 'use strict';
+let size = parseInt(process.argv.slice(2));
+let array = [];
+for(let i = 0; i < size; i++){
+array.push(Math.floor(Math.random() * Math.floor(100)));
+}
 
 const  selectionSort = (arr) =>{
   let min;
@@ -16,4 +21,7 @@ const  selectionSort = (arr) =>{
 
  return arr;
 }
+selectionSort(array);
+console.log(array);
+
 module.exports = selectionSort;
