@@ -35,7 +35,7 @@ ALGORITHM Merge(left, right, arr)
        set remaining entries in arr to remaining values in left
 ```
 
-Example of Given Array `arr = [8,6,9,3,1,90,4,89]`
+Example of Given Array   `arr = [8,6,9,3,1,90,4,89]`
 How the recursion works 
 1.   `   `[8,6,9,3,1,90,4,89,100]`
 2.    `[8,6,9,3,]`    `[1,90,4,89,100]`
@@ -44,6 +44,12 @@ How the recursion works
 5. `[3,6,8,9]`         `[1,90]`   `[4,89,100]`
 6.    `                 `[1,4,89,90,100]
 7. All together `[1,3,4,6,8,9,89,90,100]`
+
+
+ - To start , We will create two functions .One will divided the array in to two until it reduces only two values.The first function is going to use recursion method to divided it in two.
+
+ - Second step
+  
 
 
   

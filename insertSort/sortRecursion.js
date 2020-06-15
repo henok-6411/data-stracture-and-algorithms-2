@@ -67,6 +67,26 @@ return merge(
 
 const merge = (left , right) =>{
    
+  let newArray = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  while(leftIndex < left.length && rightIndex < right.length){
+
+    if(left[leftIndex] < right[rightIndex]){
+      newArray.push(left[leftIndex]);
+      leftIndex++;
+    }else{
+      newArray.push(right[rightIndex]);
+      rightIndex++;
+    }
+    console.log(newArray);
+  }
+  console.log('out side loop',newArray);
+  return newArray;
+  // .concat(left.slice(leftIndex))
+  // .concat(right.slice(rightIndex));
+
 }
 
 
