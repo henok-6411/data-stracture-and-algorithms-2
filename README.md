@@ -1,11 +1,11 @@
 # Hashtables
-<!-- Short summary or background information -->
+- the hashTable is able to add , search and compere after it save it by using hash method. 
 
 ## Challenge
-<!-- Description of the challenge -->
+ - It was challenging to search a specific key value by using get method. 
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- As hashTables allow me to avoid iterating. It's much faster than any type of iteration. Time complexity was O(1);   
 
 ## API
 <!-
