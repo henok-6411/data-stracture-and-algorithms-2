@@ -2,6 +2,10 @@
 
 const LinkedList = require('../linkedList/linked-list.js');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6d9ee93e0a2366579983db5068c6fd69d8b451a
 describe('All test', () => {
   it('started my list', () => {
     expect(() => {
@@ -9,6 +13,7 @@ describe('All test', () => {
     }).not.toThrow();
   });
 
+<<<<<<< HEAD
   it('The Inserted value will be to the beggining', () => {
     let newValue = new LinkedList();
     newValue.insert('A');
@@ -105,3 +110,18 @@ describe('Not happy path or wrong input', () => {
     expect(newlinked.toString()).toBeFalsy;
   });
 });
+=======
+  it('add to linked list', () => {
+    let newLinkedLi = new LinkedList();
+    newLinkedLi.insert('A');
+    let newstr = newLinkedLi.toString();
+    expect(newstr).toBe('{A} -> NULL');
+  });
+
+  it('The Inserted value will be to the beggining', () => {
+    let newValue = new LinkedList();
+    newValue.insert('B');
+    expect(newValue.head.val).toBe('B');
+  });
+});
+>>>>>>> c6d9ee93e0a2366579983db5068c6fd69d8b451a

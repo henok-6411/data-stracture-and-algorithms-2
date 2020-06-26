@@ -3,4 +3,8 @@
 **/vendor/*
 **/*.min.js
 **/coverage/*
+<<<<<<< HEAD
 **/build/*
+=======
+**/build/*
+>>>>>>> c6d9ee93e0a2366579983db5068c6fd69d8b451a

@@ -8,18 +8,31 @@ class Node {
   }
 }
 
+<<<<<<< HEAD
 class LinkedList {
   constructor() {
     this.head = null;
     this.size = 0;
+=======
+
+
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+>>>>>>> c6d9ee93e0a2366579983db5068c6fd69d8b451a
   }
 
   insert(val) {
     let newNode = new Node(val);
     newNode.next = this.head;
     this.head = newNode;
+<<<<<<< HEAD
     // console.log(newNode);
     return newNode;
+=======
+    console.log(newNode);
+>>>>>>> c6d9ee93e0a2366579983db5068c6fd69d8b451a
   }
   includes(val) {
     let current = this.head;
@@ -31,6 +44,7 @@ class LinkedList {
     }
     return false;
   }
+<<<<<<< HEAD
   append(value) {
     let current = this.head;
     if (!current) {
@@ -101,12 +115,23 @@ class LinkedList {
     // console.log(current);
     let str = '';
     while (current) {
+=======
+  toString() {
+    let current = this.head;
+    console.log(current);
+    let str = '';
+    while (current) {
+
+>>>>>>> c6d9ee93e0a2366579983db5068c6fd69d8b451a
       str += '{' + current.val + '}' + '->';
       current = current.next;
     }
     str += 'NULL';
     console.log(str);
+<<<<<<< HEAD
     return str;
+=======
+>>>>>>> c6d9ee93e0a2366579983db5068c6fd69d8b451a
   }
 }
 // let node1 = new Node();
@@ -114,6 +139,7 @@ class LinkedList {
 
 let myNode = new LinkedList();
 
+<<<<<<< HEAD
 myNode.append(2);
 myNode.append(8);
 myNode.append(3);
@@ -124,5 +150,15 @@ myNode.kthFromEnd(1);
 
 myNode.toString();
 // console.log(myNode.includes(5));
+=======
+
+myNode.insert(2);
+myNode.insert(5);
+myNode.insert(7);
+
+
+myNode.toString();
+console.log(myNode.includes(5));
+>>>>>>> c6d9ee93e0a2366579983db5068c6fd69d8b451a
 
 module.exports = LinkedList;
