@@ -1,6 +1,5 @@
 
 
-
 # Class 26 Code Challenge
 
 - It take's a string as an argument and checked if is there any duplicated word from the given string.   
