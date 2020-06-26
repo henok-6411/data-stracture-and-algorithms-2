@@ -1,11 +1,13 @@
-# Hashtables
-- the hashTable is able to add , search and compere after it save it by using hash method. 
+
+
+# Class 26 Code Challenge
+
+- It take's a string as an argument and checked if is there any duplicated word from the given string.   
 
 ## Challenge
- - It was challenging to search a specific key value by using get method. 
+ - To store the string in the hashTable was a little bit challenging 
 
 ## Approach & Efficiency
-- As hashTables allow me to avoid iterating. It's much faster than any type of iteration. Time complexity was O(1);   
-
-## API
-<!-
+- As i avoided nested loop to solve this problem, the time complexity is bigO(n);   
+### UMI
+![UMI](assets/repeatedword.jpg)
