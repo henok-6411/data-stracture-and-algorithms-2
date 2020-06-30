@@ -64,18 +64,24 @@ preOrder(root = this.root){
 
 
 const tree_intersection = (arr1 , arr2) =>{
-let newArray = [];
-
-for(let i = 0; i < arr1.length; i++){
-  for(let j = 0; j < arr2.length; j++){
-    if(arr1[i] === arr2[j]){
-      newArray.push(arr1[i]);
-    }
+  let newArray = {};
+  let array = [];
+  for(let i = 0; i < arr1.length; i++){
+    newArray[arr1[i]] = true;
   }
-}
-return newArray;
   
-}
+  for(let i = 0; i < arr2.length; i++){
+     let compare = newArray[arr2[i]];
+     if(compare){
+     array.push(arr2[i]);
+     newArray[arr2[i]] = false;
+     } 
+  }
+  
+  //  newArray = Object.keys(newArray);
+  return array;
+    
+  }
 
 module.exports = {Node , BinarySearchTree , tree_intersection};
 

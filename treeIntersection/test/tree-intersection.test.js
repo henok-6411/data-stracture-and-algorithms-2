@@ -66,8 +66,8 @@ describe('Happy path of intersection' , () =>{
       tree2.add(350);
       tree2.add(4);
       tree2.add(500);
-    //   expect(tree2.preOrder()).toEqual([42,  15,   4, 100, 600, 160,125, 175, 200, 350, 500
-    //  ]);
+      expect(tree2.preOrder()).toEqual([42,  15,   4, 100, 600, 160,125, 175, 200, 350, 500
+     ]);
 let array1= tree.preOrder();
 let array2 = tree2.preOrder();
 
