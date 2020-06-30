@@ -2,12 +2,12 @@
 
 # Class 26 Code Challenge
 
-- It take's a string as an argument and checked if is there any duplicated word from the given string.   
+- It take's two tree as an argument and give the intersection value in an array form.    
 
 ## Challenge
- - To store the string in the hashTable was a little bit challenging 
+ - I used the long way to grab all the values from the tree.Once after i have all the values in array form i used hashTable to compare both values. 
 
 ## Approach & Efficiency
-- As i avoided nested loop to solve this problem, the time complexity is bigO(n);   
+- The time complexity is bigO(n + m);   
 ### UMI
-![UMI](assets/repeatedword.jpg)
+![UMI]()
