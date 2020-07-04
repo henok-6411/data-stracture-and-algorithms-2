@@ -5,7 +5,7 @@ Write a function called insertShiftArray which takes in an array and the value t
 */
 
 
-let insertShiftArray = () => {
+const insertShiftArray = () => {
   let value = 16;
   let arrayNum = [4, 8, 15, 23, 42];
   let val = Math.round((arrayNum.length) / 2);
@@ -16,10 +16,5 @@ let insertShiftArray = () => {
   arrayNum[val] = value;
   return arrayNum;
 };
-insertShiftArray();
-
-
-
-
 
 module.exports = insertShiftArray;

@@ -64,17 +64,18 @@ preOrder(root = this.root){
 
 
 const tree_intersection = (arr1 , arr2) =>{
-  let newArray = {};
+  let obj = {};
   let array = [];
   for(let i = 0; i < arr1.length; i++){
-    newArray[arr1[i]] = true;
+    obj[arr1[i]] = true;
   }
+
   
   for(let i = 0; i < arr2.length; i++){
-     let compare = newArray[arr2[i]];
+     let compare = obj[arr2[i]];
      if(compare){
      array.push(arr2[i]);
-     newArray[arr2[i]] = false;
+     obj[arr2[i]] = false;
      } 
   }
   
