@@ -9,37 +9,25 @@ const hash = (key , size) =>{
   }
       return hashTable % size;
   }
+
+  let hashTableOne = new Array(20);
+  let hashTableTwo = new Array(20);
+
+  if(hashTableOne('foud' , 15)){
+    hashTableOne[hash('foud' , 15)] = {synArray[hash('fond', 15)], next: ['fond', 'enamored']}
+  }
+
   const add = (key , val) =>{
    let size = 20;
    let bucket = Array(size);
   for(let i = 0; i < bucket.length; i++){
     bucket[i] = new Map();
-  
-  }
-  
+  } 
   let index = hash(key , size);
   bucket[index].set(key , val);
-  console.log(bucket[index]);
+
   }
-  //************************************************* */
-  
-  
-  console.log(add("foud","enamored"))
-  console.log(add("wrath","anger"))
-  console.log(add("diligent","employed"))
-  console.log(add("outify","garb"))
-  console.log(add("guide","user"))
-  
-  
-  
-  // const hash = (key , size) =>{
-  //   let hashTable = 0;
-  //   for(let i = 0; i < key.length; i++){
-  //     hashTable = key.charCodeAt(i);
-  //   }
-  //   return hashTable % size;
-  // }
-  console.log('***********************************************')
+  console.log('is it adding to add',add("foud","averse"))
   const add2 = (key , val) =>{
     let size = 20;
     let bucket = Array(size);
@@ -49,7 +37,7 @@ const hash = (key , size) =>{
     }
     let index = hash(key , size);
     bucket[index].set(key , val);
-  console.log(bucket[index]);
+
   }
   
   console.log(add2("foud","averse"))
@@ -58,12 +46,9 @@ const hash = (key , size) =>{
   console.log(add2("guide","follow"))
   console.log(add2("flow","jam"))
   
-  /**
-   * 
-   * 
-   * 
-   */
+  
   function leftJoin (hashTableOne , hashTableTwo){
 
+
   }
-module.exports = leftJoin;
+module.exports = {add , add2, leftJoin};
