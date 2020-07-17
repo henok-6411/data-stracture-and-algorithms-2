@@ -5,6 +5,7 @@ const Graph = require('../graph');
 xNode can be successfully added to the graph
 An edge can be successfully added to the graph
 A collection of all nodes can be properly retrieved from the graph
+
 All appropriate neighbors can be retrieved from the graph
 Neighbors are returned with the weight between nodes included
 The proper size is returned, representing the number of nodes in the graph
@@ -22,14 +23,14 @@ describe('They happy path of Graph', () =>{
     
     expect(newNode.vertices).toEqual(['node 1','node 2','node 3','node 4']);
   })
-  xit('An edge can be successfully added to the graph' , () =>{
+  it('An edge can be successfully added to the graph' , () =>{
     let newNode = new Graph();
     newNode.addNode('node 1');
     newNode.addNode('node 2');
-    newNode.addNode('addedNode2');
-    newNode.addNode('addedNode1');
-    console.log(newNode);
-    expect(newNode).toEqual(['addedNode1' , 'addedNode2'])
+    newNode.addEdge('addedNode2' ,'addedNode1' );
+    newNode.addEdge('addedNode1','addedNode1');
+   
+    expect(newNode.degree).toEqual(2);
   })
   it('The proper size is returned, representing the number of nodes in the graph' , () =>{
     let newNode = new Graph();
