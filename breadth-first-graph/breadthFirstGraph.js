@@ -42,7 +42,7 @@ class Graph{
   }
   BreadthFirst(node){
 
-    
+console.log(node);
 
 
   }
