@@ -1,53 +1,48 @@
 class Node{
   constructor(val){
     this.val = val;
-    this.next = null;
+    this.edge = [];
+    this.searched = false;
+    this.parent = null;
   }
 }
 class Graph{
   constructor(){
-    this.vertices = [];
-    this.edge = [],
-    this.degree = 0;
+    this.node = [];
+    this.graph = {},
+    this.start = null;
+    this.end = null;
   }
-  addNode(val){
+  setStart(val){
     let vertex = new Node(val);
-    this.vertices.push(vertex);
-    this.edge[vertex] = [];
+     this.start =  this.graph[vertex];  
+     return this.start;  
   }
-  addEdge(name1 , name2){
-    let vertex = new Node(name1);
-    let vertex2 = new Node(name2);
-    this.edge[vertex].push(vertex);
-    this.edge[vertex2].push(vertex2);
+  setEnd(val){
+    let vertex = new Node(val);
+    this.end = this.graph[vertex];
+    return this.end;
   }
-  enqueue(val){
-    if(!this.front || !this.rear){
-      this.front = new Node(val);
-      this.rear = new Node(val);
-      return;
-    }
-      let newNode = new Node(val);
-      this.rear.next = newNode;
-      this.rear = newNode;
-  }
-  dequeue(){
-    if(!this.front && !this.rear){
-      return;
-    }
-    let deqValue = this.front;
-    this.front = this.front.next;
-    deqValue.next = null;
-    return newNode;
-  }
-  BreadthFirst(node){
 
-
-
-
-  }
 
 }
+
+let newGraph = new Graph();
+let start = newGraph.setStart('dubai');
+let end = newGraph.setEnd('dubai');
+
+let que = [];
+start.searched = true;
+que.push(start);
+
+while(que.length > 0){
+let current  = que.shift();
+if(current === end){
+  console.log('found' , current);
+}
+
+}
+console.log('graph',newGraph)
 
 
 module.exports = Graph;
